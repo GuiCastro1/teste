@@ -1,0 +1,10 @@
+@use'GLOBAL' as v;
+
+.contacts{
+    border: 2px, dotted, red ;
+    @include v.flex-center();
+    flex-direction: column;
+    ul{
+        list-style: none;
+    }
+}

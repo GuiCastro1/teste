@@ -1,0 +1,102 @@
+@use'variables' as v;
+
+@mixin btn-base($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    font-family: v.$ft-name;
+    text-transform: uppercase;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100px;
+    font-weight: bold;
+}
+
+@mixin smooth-transition($time: 0.3s, $ease: ease) {
+    transition: all $time $ease;
+}
+
+@mixin flex-center($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin modal-alinhamento {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  
+    &.hidden {
+      display: none;
+    }
+  }
+  // mixins/_btn-close.scss
+@mixin btn-close($color: #888, $hover-color: #000, $size: 1.5rem) {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: $size;
+    background: none;
+    border: none;
+    color: $color;
+    cursor: pointer;
+    transition: color 0.2s;
+  
+    &:hover {
+      color: $hover-color;
+    }
+  }
+  
+  // mixins/_form-style.scss
+@mixin form-style(
+    $label-weight: bold,
+    $label-size: 0.95rem,
+    $input-border: #ccc,
+    $input-focus: #007BFF,
+    $btn-bg: #007BFF,
+    $btn-hover: #0056b3,
+    $btn-color: white
+  ) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  
+    label {
+      font-weight: $label-weight;
+      font-size: $label-size;
+    }
+  
+    input {
+      padding: 0.6rem;
+      border: 1px solid $input-border;
+      border-radius: 5px;
+      font-size: 1rem;
+  
+      &:focus {
+        border-color: $input-focus;
+        outline: none;
+      }
+    }
+  
+    button {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      background-color: $btn-bg;
+      color: $btn-color;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+  
+      &:hover {
+        background-color: $btn-hover;
+      }
+    }
+  }
+  

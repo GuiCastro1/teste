@@ -1,0 +1,24 @@
+@use'GLOBAL' as v;
+
+#modais {
+    @include v.modal-alinhamento;
+}
+.cadastro-modal {
+    position: relative;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+    transition: opacity 0.3s ease;
+
+    .btn-close {
+       @include v.btn-close(#888, #000); // você pode passar outras cores
+    }
+
+    form {
+        @include v.form-style(bold, 0.95rem, #ccc, #007BFF, #007BFF, #0056b3, white);
+    }
+}

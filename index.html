@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/CSS/main.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playwrite+CU:wght@100..400&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <title>Dulce Y Cocina</title>
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Menu principal" class="header-nav">
+            <h1 class="logo">Dulce Y<br><span>Cocina</span></h1>
+
+            <button class="mobile-menu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu">
+                <span class="line1" aria-hidden="true"></span>
+                <span class="line2" aria-hidden="true"></span>
+                <span class="line3" aria-hidden="true"></span>
+            </button>
+
+            <ul class="nav-list" id="menu" role="menubar">
+                <li><a href="" role="menuitem" class="itens-li">Sobre</a></li>
+                <li><a href="" role="menuitem" class="itens-li">Doces</a></li>
+                <li><a href="" role="menuitem" class="itens-li">Contatos</a></li>
+                <li><a href="" role="menuitem" class="itens-li">Comentarios</a></li>
+                <li><a href="" role="menuitem" class="itens-li">Duvidas</a></li>
+                <li><button class="btn-enter" id="btn-login">Entrar</button></li>
+                <li><button class="btn-access" id="btn-cadastro">Cadastrar</button></li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sobre</h2>
+            <p>Dulce Y Cocina nasceu do desejo de levar mais doçura para o seu dia a dia. Fundada por Raquel , nossa
+                loja online reúne uma variedade de guloseimas para todos os gostos e ocasiões. Nosso objetivo é oferecer
+                uma experiência de compra online prática, segura e, claro, muito saborosa. Explore nossa seleção e
+                permita-se um momento de prazer!</p>
+            <figure>
+                <img src="../static/IMG/mom.jpg" alt="" loading="lazy">
+            </figure>
+        </section>
+        <section>
+            <h2>Doces</h2>
+            <div>dinamic</div>
+        </section>
+        <section>
+            <h2>Comentarios</h2>
+            <div>dinamic</div>
+        </section>
+        <section class="contacts">
+            <h2>Contatos</h2>
+            <ul>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">WhatsApp</a></li>
+                <li><a href="">Gmail</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Duvidas</h2>
+            <div>+ or - dinamic</div>
+        </section>
+
+        <section id="modais" class="hidden">
+
+            <div class="modal login-modal" id="modal-login">
+                <button class="btn-close">&times;</button>
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" id="email-login" name="email" />
+                    <label for="password">Senha</label>
+                    <input type="password" id="password-login" name="password" />
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+            <div class="modal cadastro-modal" id="modal-cadastro">
+                <button class="btn-close">&times;</button>
+                <form>
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" />
+                    <label for="number">Cel</label>
+                    <input type="number" id="number" />
+                    <label for="email">Email</label>
+                    <input type="email" id="email-cadastro" name="email" />
+                    <label for="password">Senha</label>
+                    <input type="password" id="password-cadastro" name="password" />
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Doces</a></li>
+                <li><a href="">Comentarios</a></li>
+                <li><a href="">Contatos</a></li>
+                <li><a href="">Duvidas Frequantes</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script type="module" src="../static/JS/main.js"></script> 
+
+</body>
+
+</html>

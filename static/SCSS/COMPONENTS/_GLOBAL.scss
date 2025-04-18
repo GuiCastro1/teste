@@ -1,0 +1,31 @@
+@use'variables' as *;
+@forward'variables';
+@use'mixins' as *;
+@forward'mixins';
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+background: $bg-body;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+p{
+    font-family: $ft-text;
+    color: $clr-title;
+}
+a{
+    font-family: $ft-name;
+    text-transform: uppercase;
+}
+h2{
+    font-family: $ft-title;
+    color: $clr-title;
+}
+img{
+    width: 200px;
+}

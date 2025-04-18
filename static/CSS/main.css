@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #ffb6c1 45%, #e3a9ce 50%, #da9fda 55%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+p {
+  font-family: "Fredoka", sans-serif;
+  color: #800080;
+}
+
+a {
+  font-family: "Caveat", cursive;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Playwrite CU", cursive;
+  color: #800080;
+}
+
+img {
+  width: 200px;
+}
+
+.itens-li {
+  font-weight: bold;
+  text-decoration: none;
+  color: #e63946;
+  transition: all 0.3s ease;
+}
+.itens-li:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  margin-top: 2vh;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: "Caveat", cursive;
+  rotate: -20deg;
+}
+.logo span {
+  margin-left: 40%;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background-color: #ffb6c1;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+.nav-list li .btn-enter {
+  background-color: blue;
+  color: red;
+  border: none;
+  font-family: "Caveat", cursive;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100px;
+  font-weight: bold;
+}
+.nav-list li .btn-access {
+  background-color: red;
+  color: blue;
+  border: none;
+  font-family: "Caveat", cursive;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100px;
+  font-weight: bold;
+}
+
+.mobile-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+.mobile-menu span {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background-color: #ffb6c1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.contacts {
+  border: 2px, dotted, red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contacts ul {
+  list-style: none;
+}
+
+#modais {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#modais.hidden {
+  display: none;
+}
+
+.login-modal {
+  position: relative;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.login-modal .btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.login-modal .btn-close:hover {
+  color: #000;
+}
+.login-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.login-modal form label {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+.login-modal form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.login-modal form input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+.login-modal form button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.login-modal form button:hover {
+  background-color: #0056b3;
+}
+
+#modais {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#modais.hidden {
+  display: none;
+}
+
+.cadastro-modal {
+  position: relative;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.cadastro-modal .btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.cadastro-modal .btn-close:hover {
+  color: #000;
+}
+.cadastro-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cadastro-modal form label {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+.cadastro-modal form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.cadastro-modal form input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+.cadastro-modal form button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.cadastro-modal form button:hover {
+  background-color: #0056b3;
+}
+
+/*# sourceMappingURL=main.css.map */
